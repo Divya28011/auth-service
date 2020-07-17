@@ -16,16 +16,16 @@ public class Address {
     private String addressId;
 
     @Column(name="ADDRESS_LINE1",length=50,nullable=false,unique=true)
-    private String address_line1;
+    private String addressLine1;
 
     @Column(name="ADDRESS_LINE2",length=50,nullable=false,unique=true)
-    private String address_line2;
+    private String addressLine2;
 
     @Column(name="CITY",length=30,nullable=false)
     private String city;
 
     @Column(name="ZIPCODE",length=10,nullable=false)
-    private Long zipcode;
+    private Long zipCode;
 
     @Column(name="STATE",length=30,nullable=false)
     private String state;

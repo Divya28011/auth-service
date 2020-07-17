@@ -19,15 +19,15 @@ public class Wallet {
     private String walletId;
 
     @Column(name="CARDHOLDER NAME",length=50,nullable=false,unique=true)
-    private String cardholder_name;
+    private String cardholderName;
 
     @Column(name="CARD_NUMBER",length=50,nullable=false,unique=true)
-    private Long card_number;
+    private Long cardNumber;
 
     @Column(name="EXPIRY DATE",length=30,nullable=false)
-    private Long expiry_date;
+    private Long expiryDate;
 
     @Column(name="UPI ID",length=50,nullable=false,unique=true)
-    private String upi_id;
+    private String upiId;
 
 }
