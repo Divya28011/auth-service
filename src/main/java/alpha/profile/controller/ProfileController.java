@@ -4,7 +4,6 @@ import alpha.profile.model.Profile;
 
 import alpha.profile.exceptions.UserNotFoundException;
 import alpha.profile.services.ProfileService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +11,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 
 import javax.validation.Valid;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -45,7 +43,7 @@ public class ProfileController {
     }
 
     @PostMapping("/user")
-    public Profile createUser(@RequestBody @Valid Profile profile) {
+    public Profile createUser(@RequestBody Profile profile) {
         profile.setUserId(UUID.randomUUID().toString());
         return profileService.createUser(profile);
 
